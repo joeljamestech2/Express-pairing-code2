@@ -102,7 +102,7 @@ const App = () => {
         <label>Phone number</label>
         <input
           type="number"
-          placeholder="917788861848"
+          placeholder="+233268374753"
           value={ipt}
           onChange={(e) => setIpt(e.target.value)}
         />
