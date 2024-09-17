@@ -2,18 +2,18 @@
     "name": "express-pair",
     "version": "1.0.0",
     "description": "baileys session",
-    "main": "guru.js",
+    "main": "xlicon.js",
     "type": "module",
     "engines": {
         "node": "20.16.0"
     },
     "scripts": {
-        "start": "node guru.js",
+        "start": "node xlicon.js",
         "build": "cd client && npm run build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": "Guru",
+    "author": "AB",
     "license": "",
     "dependencies": {
         "@hapi/boom": "^10.0.1",
