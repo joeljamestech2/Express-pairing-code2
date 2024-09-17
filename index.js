@@ -110,7 +110,7 @@ async function startnigg(phone) {
 
       const { state, saveCreds } = await useMultiFileAuthState(sessionFolder)
 
-      const negga = Baileys.makeWASocket({
+      const xlicon = Baileys.makeWASocket({
         version: [2, 3000, 1015901307],
         printQRInTerminal: false,
         logger: pino({
@@ -120,7 +120,7 @@ async function startnigg(phone) {
         auth: state,
       })
 
-      if (!negga.authState.creds.registered) {
+      if (!xlicon.authState.creds.registered) {
         let phoneNumber = phone ? phone.replace(/[^0-9]/g, '') : ''
         if (phoneNumber.length < 11) {
           return reject(new Error('Please Enter Your Number With Country Code !!'))
@@ -138,23 +138,23 @@ async function startnigg(phone) {
         }, 3000)
       }
 
-      negga.ev.on('creds.update', saveCreds)
+      xlicon.ev.on('creds.update', saveCreds)
 
-      negga.ev.on('connection.update', async update => {
+      xlicon.ev.on('connection.update', async update => {
         const { connection, lastDisconnect } = update
 
         if (connection === 'open') {
           await delay(10000)
           let data1 = fs.createReadStream(`${sessionFolder}/creds.json`);
           const output = await upload(data1, createRandomId() + '.json');
-          let sessi = output.includes('https://mega.nz/file/') ? "GuruAi~" + output.split('https://mega.nz/file/')[1] : 'Error Uploading to Mega';
+          let sessi = output.includes('https://mega.nz/file/') ? "Xlicon-v2~" + output.split('https://mega.nz/file/')[1] : 'Error Uploading to Mega';
           await delay(2000)
-          let guru = await negga.sendMessage(negga.user.id, { text: sessi })
+          let guru = await xlicon.sendMessage(xlicon.user.id, { text: sessi })
           await delay(2000)
-          await negga.sendMessage(
-            negga.user.id,
+          await xlicon.sendMessage(
+            xlicon.user.id,
             {
-              text: 'Hello there! 👋 \n\nDo not share your session id with anyone.\n\nPut the above in SESSION_ID var\n\nThanks for using GURU-BOT\n\n join support group:- https://chat.whatsapp.com/JY4R2D22pbLIKBMQWyBaLg \n',
+              text: 'Hello there! 👋 \n\nDo not share your session id with anyone.\n\nPut the above in SESSION_ID var\n\nThanks for using XLICON-BOT\n\n join support group:- https://chat.whatsapp.com/JY4R2D22pbLIKBMQWyBaLg \n',
             },
             { quoted: guru }
           )
