@@ -13,7 +13,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-say('Negga', {
+say('xlicon', {
   font: 'pallet',
   align: 'center',
   gradient: ['red', 'magenta'],
