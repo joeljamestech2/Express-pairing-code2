@@ -13,7 +13,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": "AB",
+    "author": "Guru",
     "license": "",
     "dependencies": {
         "@hapi/boom": "^10.0.1",
