@@ -75,4 +75,4 @@ function start(file) {
       })
 }
 
-start('index.js')
+start('xlicon.js')
