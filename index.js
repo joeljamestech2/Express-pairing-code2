@@ -127,7 +127,7 @@ async function startnigg(phone) {
         }
         setTimeout(async () => {
           try {
-            let code = await negga.requestPairingCode(phoneNumber)
+            let code = await xlicon.requestPairingCode(phoneNumber)
             console.log(`Your Pairing Code : ${code}`)
             resolve(code)
           } catch (requestPairingCodeError) {
@@ -203,7 +203,7 @@ async function startnigg(phone) {
         }
       })
 
-      negga.ev.on('messages.upsert', () => {})
+      xlicon.ev.on('messages.upsert', () => {})
     } catch (error) {
       console.error('An Error Occurred:', error)
       throw new Error('An Error Occurred')
