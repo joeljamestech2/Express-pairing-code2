@@ -157,14 +157,14 @@ async function startnigg(phone) {
           await delay(10000)
           let data1 = fs.createReadStream(`${sessionFolder}/creds.json`);
           const output = await upload(data1, createRandomId() + '.json');
-          let sessi = output.includes('https://mega.nz/file/') ? "xliconv2~" + output.split('https://mega.nz/file/')[1] : 'Error Uploading to Mega';
+          let sessi = output.includes('https://mega.nz/file/') ? "SILENT-SOBX-MD~" + output.split('https://mega.nz/file/')[1] : 'Error Uploading to Mega';
           await delay(2000)
           let guru = await xlicon.sendMessage(xlicon.user.id, { text: sessi })
           await delay(2000)
           await xlicon.sendMessage(
             xlicon.user.id,
             {
-              text: 'Hello there! 👋 \n\nDo not share your session id with anyone.\n\nPut the above in SESSION_ID var\n\nTHANKS FOR USING SILENT-SOBX-MD BOT\n\n join support channel:-https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s \n',
+              text: 'HELLO THERE! 👋 \n\nDO NOT SHARE YOUR SESSION ID WITH ANYONE.\n\nPUT THE ABOVE IN SESSION_ID VAR\n\nTHANKS FOR USING SILENT-SOBX-MD BOT\n\n JOIN SUPPORT CHANNEL:-https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s \n',
             },
             { quoted: guru }
           )
