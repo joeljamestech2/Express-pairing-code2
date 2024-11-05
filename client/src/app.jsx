@@ -93,16 +93,16 @@ const App = () => {
     <div className="container">
       <form onSubmit={submit}>
         <BsPerson className="icon" />
-        <h1>Link devices!</h1>
+        <h1>SILENT-SOBX-MD-PAIR</h1>
         {res.status && (
           <Alert variant={res.is}>
             {res.msg}
           </Alert>
         )}
-        <label>Phone number</label>
+        <label>ᴱᴺᵀᴱᴿ ᵁᴿ ᴾᴴᴼᴺᴱ ᴺᵁᴹᴮᴱᴿ ᵂᴵᵀᴴ ᶜᴼᵁᴺᵀᴿᵞ ᶜᴼᴰᴱ</label>
         <input
           type="number"
-          placeholder="233268374753"
+          placeholder="923096287432"
           value={ipt}
           onChange={(e) => setIpt(e.target.value)}
         />
