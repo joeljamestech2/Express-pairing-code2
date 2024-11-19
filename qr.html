@@ -13,97 +13,124 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
 
     <style>
-     body,
-html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: "Outfit", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('https://image.lexica.art/full_webp/bf43e634-900b-44f2-8ed9-7749073c2856'); 
-    background-size: cover; 
-    background-position: center; 
-    position: relative;
-}
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Outfit", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://image.lexica.art/full_webp/bf43e634-900b-44f2-8ed9-7749073c2856');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
 
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        body::before {
+            content: "GURU BOT";
+            position: fixed;
+            font-size: 3em;
+            color: rgba(255, 255, 255, 0.2);
+            z-index: -1;
+        }
 
+        main.code {
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            animation: borderAnimation 8s infinite linear;
+        }
 
-body::before {
-    content: "GURU BOT";
-    position: fixed;
-    font-size: 3em;
-    color: rgba(255, 255, 255, 0.2); 
-    z-index: -1; 
-}
+        main.code::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            z-index: -1;
+            border-radius: 12px;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 300% 300%;
+            animation: rainbowAnimation 6s infinite;
+        }
 
-main.code {
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 400px;
-    width: 100%;
-}
+        div.card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
 
-div.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
+        img.code_1 {
+            width: 70%;
+            max-width: 200px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
 
-img.code_1 {
-    width: 70%;
-    max-width: 200px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
+        h1.title {
+            color: #128c7e;
+            font-weight: 700;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
 
-h1.title {
-    color: #128c7e;
-    font-weight: 700;
-    font-size: 1.5em;
-    margin-top: 20px;
-}
+        p.legend {
+            color: #777;
+            font-size: 1em;
+            margin-top: 10px;
+            text-align: center;
+        }
 
-p.legend {
-    color: #777;
-    font-size: 1em;
-    margin-top: 10px;
-    text-align: center;
-}
+        @keyframes rainbowAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
 
+            50% {
+                background-position: 100% 50%;
+            }
 
-@keyframes scanAnimation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
-img.code_1:hover {
-    animation: scanAnimation 1s ease infinite;
-}
+        img.code_1:hover {
+            animation: scanAnimation 1s ease infinite;
+        }
 
+        @keyframes scanAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -112,8 +139,8 @@ img.code_1:hover {
         <main class="code">
             <div class="card">
                 <img id="qr-code" class="code_1" src="https://qrcode.guruapi.tech/" alt="GURU BOT" title="Scan the QR code to connect with WhatsApp" />
-                <h1 class="title">SILENT-SOBX-MD QR</h1>
-                <p class="legend">Scan The QR To Get Session id For Bot</p>
+                <h1 class="title">Bentley QR</h1>
+                <p class="legend">Scan The QR To Get Session ID For Bot</p>
             </div>
         </main>
     </div>
