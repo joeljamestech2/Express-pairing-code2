@@ -93,7 +93,7 @@ const App = () => {
     <div className="container">
       <form onSubmit={submit}>
         <BsPerson className="icon" />
-        <h1>BENTLEY PAIR CODE</h1>
+        <h1>JOEL MD PAIR CODE</h1>
         {res.status && (
           <Alert variant={res.is}>
             {res.msg}
@@ -102,7 +102,7 @@ const App = () => {
         <label>ᴱᴺᵀᴱᴿ ᵁᴿ ᴾᴴᴼᴺᴱ ᴺᵁᴹᴮᴱᴿ ᵂᴵᵀᴴ ᶜᴼᵁᴺᵀᴿᵞ ᶜᴼᴰᴱ</label>
         <input
           type="number"
-          placeholder="25474000....."
+          placeholder="e.g 2557145950xx"
           value={ipt}
           onChange={(e) => setIpt(e.target.value)}
         />
